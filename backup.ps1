@@ -1,6 +1,6 @@
 #Region Functions
     #****************************************************
-
+    #function to write to log
     function Write-Log {
         Param (
             [Parameter(Mandatory=$true)]
@@ -13,7 +13,7 @@
         Add-Content -Path $logFilePath -Value $logMessage
     }
 
-
+    #****************************************************
 
 
     #Function to get source folder size
@@ -59,7 +59,7 @@
         
     }
 
-
+    #****************************************************
     function MakeBackup{
 
         param (
@@ -115,7 +115,7 @@
     }
     #****************************************************
 
-    #function to write to log
+    
   
     
 
@@ -147,7 +147,7 @@ Clear-Host
    Write-Host "Logging to $logPath initiated!"  -ForegroundColor DarkCyan
     #write info to log
    Write-Log -Message "Logging Started" -LogFilePath $logPath
-#EndRegion Source folder
+#EndRegion Logging folder
 
 
 #Region Source folder
